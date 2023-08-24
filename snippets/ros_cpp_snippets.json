@@ -1,0 +1,105 @@
+{
+    "rosnodeTemplate": {
+        "prefix": "rosnode",
+        "body": [
+            "// c++\r",
+            "#include <string>\n",
+            "#include <iostream>\n",
+            "// ros\r",
+            "#include <ros/ros.h>\n",
+            "// custom\n",
+            "int main(int argc, char* argv[])",
+            "{",
+            "\t// Initialize ros\r",
+            "\tros::init(argc, argv, \"${1:/*node_name*/}\");",
+            "\tros::NodeHandle nh;",
+            "\t${0}",
+            "\treturn 0;",
+            "}"
+        ],
+        "description": "node.cpp template"
+    },
+    "ros::init": {
+        "prefix": "rosinit",
+        "body": [
+            "// Initialize ros\r",
+            "ros::init(argc, argv, \"${1:/*node_name*/}\");\r",
+            "ros::NodeHandle n;\n$0"
+        ],
+        "description": "Initialize ros"
+    },
+    "ros get param": {
+        "prefix": "rosparam_get",
+        "body": "if (!n.getParam(\"$1\", ${1:name}))\n\t{ ROS_ERROR(\"No $1 param\"); }\n$0"
+    },
+    "rosParam": {
+        "prefix": "rosParam",
+        "body": [
+            "_nh.param<${1:/*data_type*/}>(${2:param_name}, ${3:param_val}, ${4:default_val});",
+            "$0"
+        ],
+        "description": "ros param"
+    },
+    "ros::Publisher": {
+        "prefix": "rospublisher",
+        "body": [
+            "ros::Publisher ${1:/*xxx_pub*/} = nh.advertise<${2: /*msg_type*/}>(\"${3:/*topic_name*/}\", ${5:100});\n$0"
+        ],
+        "description": "create a ros publisher"
+    },
+    "ros::Subscriber": {
+        "prefix": "rossubscriber",
+        "body": [
+            "ros::Subscriber ${1:/*xxx_sub*/} = nh.subscribe<${2:/*msg_type*/}>(\"${3:/*topic_name*/}\", ${4:100}, ${5:/*subscribe_callback_name*/});\n$0"
+        ],
+        "description": "create a ros subscriber"
+    },
+    "ros::Subscriber callback": {
+        "prefix": "rossubcallback",
+        "body": [
+            "void ${1:/*subscribe_callback_name*/}(const ${2:/*msg_type*/} &msg)",
+            "{",
+            "\t${0}",
+            "}"
+        ],
+        "description": "subscriber callback"
+    },
+    "ros::ServiceServer": {
+        "prefix": "rosadservice",
+        "body": [
+            "ros::ServiceServer ${1:/*xxx_service*/} = nh.advertiseService(\"${2:/*service_name*/}\", ${3:/*service_callback_func*/});\n$0"
+        ],
+        "description": "advertise a service"
+    },
+    "ros::ServiceServer callback": {
+        "prefix": "rossercallback",
+        "body": [
+            "bool ${1:/*service_callback_func*/}(${2:/*srv_type*/}::Request &req, ${2}::Response &res)",
+            "{",
+            "\t${0}",
+            "\treturn true;",
+            "}"
+        ],
+        "description": "service callback"
+    },
+    "ros::ServiceClient": {
+        "prefix": "rosserclient",
+        "body": [
+            "ros::ServiceClient ${1:/*service_client_object*/} = nh.serviceClient<${2:/*service_type*/}>(\"${3:/*service_name*/}\");\r$0"
+        ],
+        "description": "serviceClient"
+    },
+    "ros rate while": {
+        "prefix": "rosratewhile",
+        "body": [
+            "ros::Rate loop_rate(${1:10});",
+            "while (ros::ok())",
+            "{",
+            "\t${0:/* code for loop body */}\n",
+            "\tros::spinOnce();",
+            "\tloop_rate.sleep();",
+            "}"
+        ],
+        "description": "Rate … while"
+    }
+}

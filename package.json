@@ -1,0 +1,47 @@
+{
+	"name": "RosySnippets",
+	"displayName": "rosy_snippets",
+	"description": "VS Code extension with a collection of ROS snippets for roscpp, launch files.",
+	"version": "0.0.1",
+	"publisher": "shadow-css-2077",
+	"icon": "media/icon.png",
+	"keywords": [
+		"ros",
+		"robot"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xiaodong2077/rosy_snippets"
+	},
+	"engines": {
+		"vscode": "^1.44.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "xml",
+				"extensions": [
+					"launch"
+				]
+			}
+		],
+		"snippets": [
+			{
+				"language": "xml",
+				"path": "./snippets/ros_launch_file.json"
+			},
+			{
+				"language": "cpp",
+				"path": "./snippets/ros_cpp_snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "b5921d6f-c89e-6e09-b14d-d903cd9ee4ad",
+		"publisherDisplayName": "风晴雪",
+		"publisherId": "shadow-css-2077"
+	}
+}

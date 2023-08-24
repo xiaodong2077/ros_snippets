@@ -1,0 +1,62 @@
+{
+    "launch": {
+        "prefix": "launch",
+        "body": [
+            "<?xml version=\"1.0\"?>",
+            "<launch>\n",
+            "\t${0}",
+            "\n</launch>"
+        ],
+        "description": "launch tag"
+    },
+    "arg": {
+        "prefix": "arg",
+        "body": "<arg name=\"${1}\" default=\"${2}\"/>\n$0",
+        "description": "arg tag"
+    },
+    "param": {
+        "prefix": "param",
+        "body": "<param name=\"${1}\" value=\"$(arg ${2:arg name})\"/>\n${0}",
+        "description": "param tag"
+    },
+    "node": {
+        "prefix": "node",
+        "body": [
+            "<node name=\"${1:node_name}\" pkg=\"${2:ros_package}\" type=\"${3:executable}\"  output=\"${4|log,screen|}\" respawn=\"${5|false,true|}\" respawn_delay=\"${6:0}\">",
+            "\t${0}",
+            "</node>"
+        ],
+        "description": "node tag"
+    },
+    "rosParam": {
+        "prefix": "rosParam",
+        "body": "<rosparam command=\"load\" file=\"${1:$(find ${2:ros_package_name})}/${3:yaml file path}\"/>\n${0}",
+        "description": "load ros param from yaml"
+    },
+    "include": {
+        "prefix": "include",
+        "body": [
+            "<include file=\"${1:$(find ${2:ros_package_name})/}${3:launch file path}\">",
+            "\t${0}",
+            "</include>"
+        ],
+        "description": "include another launch file"
+    },
+    "group": {
+        "prefix": "group",
+        "body": [
+            "<group ${2|if,unless|}=\"${3:$(arg ${4:arg_name})}\">",
+            "\t${0}",
+            "</group>"
+        ],
+        "description": "group tag"
+    },
+    "remap": {
+        "prefix": "remap",
+        "body": [
+            "<remap from=\"${1}\" to=\"${2}\"/>",
+            "${0}"
+        ],
+        "description": "remap topic A to B"
+    }
+}
