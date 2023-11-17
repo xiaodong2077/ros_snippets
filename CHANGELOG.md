@@ -12,3 +12,17 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - roslaunch snippets
 - roscpp snippets
+
+## [0.0.2] - 2023-11-17
+
+### Fixed
+
+- 统一NodeHandle的变量名为nh
+
+### Removed
+
+- 移除json中不必要的`\r`和`\t`
+
+### Changed
+
+- launch中的`rosParam`改为`rosparam`

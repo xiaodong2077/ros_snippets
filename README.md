@@ -1,6 +1,6 @@
-# rosy snippets
+# ROS1 snippets
 
-VS Code extension of some snippets about roscpp and ros launch.
+VS Code extension with a collection of ROS1 snippets about roscpp and roslaunch.
 
 ## usage
 
