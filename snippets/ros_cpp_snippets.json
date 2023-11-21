@@ -107,5 +107,22 @@
             "}"
         ],
         "description": "Rate … while"
+    },
+    "ros timer": {
+        "prefix": "rostimer",
+        "body": [
+            "ros::Timer ${1:/*timer_object*/} = nh.createTimer(ros::Duration(0.1), ${2:/*TimerCallback*/});",
+            "${0}"
+        ],
+        "description": "create a ros::Timer"
+    },
+    "ros timer callback": {
+        "prefix": "rostimercallback",
+        "body": [
+            "void ${1:/*TimerCallback*/}(const ros::TimerEvent& event){",
+            "${0}",
+            "}"
+        ],
+        "description": "callback of ros timer"
     }
 }
