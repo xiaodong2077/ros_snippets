@@ -2,7 +2,7 @@
 	"name": "RosySnippets",
 	"displayName": "ros_snippets",
 	"description": "VS Code extension with a collection of ROS1 snippets about roscpp and roslaunch.",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "shadow-css-2077",
 	"icon": "media/icon.jpeg",
 	"keywords": [
