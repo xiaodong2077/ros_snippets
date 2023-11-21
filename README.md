@@ -30,6 +30,8 @@ Install this extension, and you will see some snippets when you code.
 - `rossercallback`
 - `rosserclient`
 - `rosratewhile`
+- `rostimer`
+- `rostimercallback`
 
 ## license
 
