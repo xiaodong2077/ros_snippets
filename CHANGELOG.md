@@ -9,6 +9,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Added
 
 - add `rostimer`.
+- add `rostimercallback`.
 
 ## [0.0.2] - 2023-11-17
 
