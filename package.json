@@ -1,13 +1,16 @@
 {
 	"name": "RosySnippets",
 	"displayName": "ros_snippets",
-	"description": "VS Code extension with a collection of ROS1 snippets about roscpp and roslaunch.",
-	"version": "0.0.3",
+	"description": "ROS 1 snippets about roscpp, roslaunch and cmake",
+	"version": "0.0.5",
 	"publisher": "shadow-css-2077",
-	"icon": "media/icon.jpeg",
+	"icon": "media/icon.png",
 	"keywords": [
 		"ros",
-		"robot"
+		"robot",
+		"snippets",
+		"cpp",
+		"c++"
 	],
 	"repository": {
 		"type": "git",
@@ -31,11 +34,15 @@
 		"snippets": [
 			{
 				"language": "xml",
-				"path": "./snippets/ros_launch_file.json"
+				"path": "./snippets/ros_launch_snippets.json"
 			},
 			{
 				"language": "cpp",
 				"path": "./snippets/ros_cpp_snippets.json"
+			},
+			{
+				"language": "cmake",
+				"path": "./snippets/ros_cmake_snippets.json"
 			}
 		]
 	},

@@ -4,7 +4,20 @@ All notable changes to the "ros-snippets" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [0.0.3] - 203-11-21
+## [0.0.5] - 2024-05-16
+
+### Changed
+
+- Add more lines in readme.
+- New icon powered by DALL·E 3
+
+## [0.0.4] - 2024-05-16
+
+### Added
+
+- add `cmake` snippets
+
+## [0.0.3] - 2023-11-21
 
 ### Added
 

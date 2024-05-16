@@ -1,12 +1,13 @@
 # ROS1 snippets
 
-VS Code extension with a collection of ROS1 snippets about roscpp and roslaunch.
+VS Code extension with a collection of ROS1 snippets about roscpp, roslaunch and cmake.
 
 ## usage
 
 Make sure you know [snippets of VS Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets).
 
-Install this extension, and you will see some snippets when you code.
+It currently support `cpp`, `xml`(.launch) and `cmake`(CMakelists.txt) languages.
+Install this extension, you will see some snippets when you code with them.
 
 ### roslaunch
 
@@ -32,6 +33,16 @@ Install this extension, and you will see some snippets when you code.
 - `rosratewhile`
 - `rostimer`
 - `rostimercallback`
+
+### cmake
+
+- `catkinincludedirs`
+- `catkinlibraries`
+- `catkinexportedtargets`
+- `installroslib`
+- `installrosnode`
+- `installheaderfiles`
+- `installlaunchfiles`
 
 ## license
 

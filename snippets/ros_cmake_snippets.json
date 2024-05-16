@@ -1,0 +1,54 @@
+{
+    "catkin INCLUDE DIRS": {
+        "prefix": "catkinincludedirs",
+        "body": [
+            "\\${catkin_INCLUDE_DIRS}$0"
+        ]
+    },
+    "catkin LIBRARIES": {
+        "prefix": "catkinlibraries",
+        "body": [
+            "\\${catkin_LIBRARIES}$0"
+        ]
+    },
+    "catkin EXPORTED TARGETS": {
+        "prefix": "catkinexportedtargets",
+        "body": [
+            "\\${catkin_EXPORTED_TARGETS}$0"
+        ]
+    },
+    "install shared library": {
+        "prefix": "installroslib",
+        "body": [
+            "install(TARGETS ${1:library_name}",
+            "ARCHIVE DESTINATION \\${CATKIN_PACKAGE_LIB_DESTINATION}",
+            "LIBRARY DESTINATION \\${CATKIN_PACKAGE_LIB_DESTINATION}",
+            "RUNTIME DESTINATION \\${CATKIN_GLOBAL_BIN_DESTINATION}",
+            ")$0"
+        ]
+    },
+    "install executable node": {
+        "prefix": "installrosnode",
+        "body": [
+            "install(TARGETS ${1:node_name}",
+            "RUNTIME DESTINATION \\${CATKIN_PACKAGE_BIN_DESTINATION}",
+            ")$0"
+        ]
+    },
+    "install header files": {
+        "prefix": "installheaderfiles",
+        "body": [
+            "install(DIRECTORY ${1:include_dir}",
+            "DESTINATION \\${CATKIN_PACKAGE_INCLUDE_DESTINATION}",
+            ")$0"
+        ]
+    },
+    "install launch files": {
+        "prefix": "installlaunchfiles",
+        "body": [
+            "install(DIRECTORY ${1:launch_dir}",
+            "DESTINATION \\${CATKIN_PACKAGE_SHARE_DESTINATION}/launch",
+            ")$0"
+        ]
+    }
+}
