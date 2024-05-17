@@ -56,7 +56,7 @@
     "ros::Subscriber": {
         "prefix": "rossubscriber",
         "body": [
-            "ros::Subscriber ${1:/*xxx_sub*/} = nh.subscribe<${2:/*msg_type*/}>(\"${3:/*topic_name*/}\", ${4:100}, ${5:/*subscribe_callback_name*/});",
+            "ros::Subscriber ${1:/*xxx_sub*/} = nh.subscribe(\"${2:/*topic_name*/}\", ${3:100}, ${4:/*subscribe_callback_name*/});",
             "$0"
         ],
         "description": "create a ros subscriber"

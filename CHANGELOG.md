@@ -4,6 +4,13 @@ All notable changes to the "ros-snippets" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.6] - 2024-05-17
+
+### Fixed
+
+- `rossubscriber` under cpp does not require explicit specification of the message type.
+- `node` under launch is now clearer and more descriptive.
+
 ## [0.0.5] - 2024-05-16
 
 ### Changed

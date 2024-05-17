@@ -28,7 +28,7 @@
     "node": {
         "prefix": "node",
         "body": [
-            "<node name=\"${1:node_name}\" pkg=\"${2:ros_package}\" type=\"${3:executable}\"  output=\"${4|log,screen|}\" respawn=\"${5|false,true|}\" respawn_delay=\"${6:0}\">",
+            "<node name=\"${1:node_display_name}\" pkg=\"${2:ros_package}\" type=\"${3:executable_node_name}\"  output=\"${4|log,screen|}\" respawn=\"${5|false,true|}\" respawn_delay=\"${6:0}\" args=\"\">",
             "${0}",
             "</node>"
         ],
