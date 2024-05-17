@@ -2,7 +2,7 @@
 	"name": "RosySnippets",
 	"displayName": "ros_snippets",
 	"description": "ROS 1 snippets about roscpp, roslaunch and cmake",
-	"version": "v0.0.6",
+	"version": "0.0.6",
 	"publisher": "shadow-css-2077",
 	"icon": "media/icon.png",
 	"keywords": [
